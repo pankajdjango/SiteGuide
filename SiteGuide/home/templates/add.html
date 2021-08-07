@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block tilte %}New Patient{% endblock tilte %}
+{% block body %}
+
+<div class="container ">
+    <form action="" method="POST" class="offset-3 col-5 bg-secondary text-light p-3">
+        {% csrf_token %}
+        {% for fm in form %}
+           {{fm.label_tag}}
+           {{fm}}
+        {% endfor %}
+        <input type="submit" class="btn btn-sm my-2 btn-success" value="Register">
+    </form>
+</div>
+
+
+{% endblock body %}
